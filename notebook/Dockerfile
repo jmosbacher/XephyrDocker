@@ -23,8 +23,8 @@ RUN source Xephyr/pacman/installExample.sh likelihood1D
 RUN source Xephyr/pacman/installExample.sh SR1Like
 RUN source Xephyr/pacman/build.sh
 RUN mv ./build ./xephyr_examples/
-RUN root -b "/home/xephyrian/Xephyr/loadXephyr.C"
-
+RUN root -b "./Xephyr/loadXephyr.C"
+RUN root -b "./xephyr_examples/likelihood1D/produceDataAndModels.C"
 EXPOSE 8080
 
 # Run jupyter
